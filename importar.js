@@ -33,8 +33,8 @@ function initializeMap() {
     if (dataMap) {
         dataMap.remove();
     }
-    dataMap = L.map('mapImp').setView([-35.658412064282025, -63.76035690307618], 13);
-    
+    dataMap = L.map('mapImp',).setView([-35.658412064282025, -63.76035690307618], 13);
+    dataMap.addControl(new L.Control.Fullscreen());
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(dataMap);
